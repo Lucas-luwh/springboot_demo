@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    druid:
+      driver-class-name: oracle.jdbc.driver.OracleDriver     # 数据库驱动
+      url: jdbc:oracle:thin:@127.0.0.1:1521:orcl     # 数据库链接
+      username: C##V45PRO_JYLC     # 数据库账号
+      password: 1     # 数据库密码
+  devtools:
+    restart:
+      enabled: true     # 开启热更新
+  cache:
+    type: ehcache
+    ehcache:
+      config: classpath:ehcache.xml
+logging:
+  level:
+    com.lwh: debug
+info:
+  app:
+    name: ehcache
+    version: 1.0.0
