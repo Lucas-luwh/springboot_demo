@@ -3,7 +3,7 @@ spring:
     #设置缓存为 Redis
     type: redis
   redis:
-    host: 192.168.0.224
+    host: 192.168.0.105
     #指定缓存库
     database: 0
     lettuce:
@@ -20,5 +20,12 @@ spring:
     password: root
     # redis超时时间
     timeout: 100000
+  datasource:
+    druid:
+      url: jdbc:oracle:thin:@127.0.0.1:1521:orcl     # 数据库链接
+      driver-class-name: oracle.jdbc.driver.OracleDriver     # 数据库驱动
+      username: C##V45PRO_JYLC     # 数据库账号
+      password: 1     # 数据库密码
 mybatis-plus:
-  mapper-locations: classpath:mapper
+  mapper-locations: classpath:mapper/*.Mapper.xml
+  type-aliases-package: com.lwh.redis.pojo
