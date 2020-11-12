@@ -5,6 +5,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>springboot-demo-ehcache</module>
+        <module>springboot-demo-redis</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

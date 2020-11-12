@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lwh.cache.mapper.UserMapper">
+
+    <resultMap id="BaseResultMap" type="com.lwh.cache.entity.User">
+        <result column="C_IDEN" jdbcType="INTEGER" property="id" />
+        <result column="C_USER_NAME" jdbcType="VARCHAR" property="name" />
+        <result column="C_USER_PWD" jdbcType="VARCHAR" property="password" />
+    </resultMap>
+    <insert id="saveOrUpdate">
+        <selectKey keyProperty="count" resultType="int" order="BEFORE">
+            select count(*) from t_s_user where C_IDEN = #{id}
+        </selectKey>
+        <if test="count > 0">
+            update t_s_user
+            set C_USER_NAME = #{name}}
+            where C_IDEN = #{id}
+        </if>
+        <if test="count==0">
+            insert into t_s_user values(#{id},#{name})
+        </if>
+    </insert>
+
+
+    <select id="Sel"  resultMap="BaseResultMap">
+        select * from t_s_user where C_IDEN = #{id}
+    </select>
+
+</mapper>
