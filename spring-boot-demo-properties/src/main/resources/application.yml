@@ -1,0 +1,12 @@
+server:
+  port: 8080
+  address: 127.0.0.1
+application:
+  name: dev
+  version: 1
+developer:
+  name: dev环境
+  website: dev环境
+  qq: dev环境 237497819
+  phone-number: dev环境 17326075631
+
