@@ -1,0 +1,25 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /admin
+spring:
+  security:
+    user:
+      password: root
+      name: root
+  application:
+    name: admin client
+  boot:
+    admin:
+      client:
+        username: ${spring.security.user.name}
+        password: ${spring.security.user.password}
+        url: 127.0.0.1:8000
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always

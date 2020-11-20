@@ -8,6 +8,10 @@
         <module>springboot-demo-redis</module>
         <module>spring-boot-demo-properties</module>
         <module>spring-boot-demo-actuator</module>
+        <module>spring-boot-demo-admin</module>
+        <module>spring-boot-demo-admin/spring-boot-demo-admin-client</module>
+        <module>spring-boot-demo-admin</module>
+        <module>spring-boot-demo-log-aop</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
